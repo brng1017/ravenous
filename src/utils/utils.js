@@ -1,5 +1,4 @@
-const api_key =
-  '5peg6_9VOM4R3QLLUz6Q5kw0fdbl6Fd_k3hW-m-mUXSKzZ9D6iCqU-AU-U0s7deG3U52BSAvDwdr4diuWnDNltp2kB9iSTqDp2Ql-zfVgJHQTrk3U8-qxXRrMxBHZHYx';
+const api_key = process.env.REACT_APP_YELP_API;
 const url = 'https://api.yelp.com/v3';
 
 const yelp = {
