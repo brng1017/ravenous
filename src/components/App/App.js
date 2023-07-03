@@ -4,18 +4,6 @@ import BusinessList from '../BusinessList/BusinessList';
 import SearchBar from '../SearchBar/SearchBar';
 import yelp from '../../utils/utils';
 
-// const business = {
-//   imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-//   name: 'MarginOtto Pizzeria',
-//   address: '1010 Paddington Way',
-//   city: 'Flavortown',
-//   state: 'NY',
-//   zipCode: '10101',
-//   category: 'Italian',
-//   rating: 4.5,
-//   reviewCount: 90
-// };
-
 // Make addresses clickable and have them open the address in Google Maps in a new tab.
 // Make images clickable and have them open the business’ website in a new tab.
 // Clicking on a different sorting option automatically re-queries the Yelp API, rather than having to manually click “Let’s Go” again.
@@ -29,15 +17,15 @@ const App = () => {
   const searchYelp = async (term, location, sortBy) => {
     const businessResults = await yelp.search(term, location, sortBy);
     setBusinesses(businessResults);
-  }
+  };
 
   return (
-    <div className="App">
+    <div className='App'>
       <h1>ravenous</h1>
       <SearchBar searchYelp={searchYelp} />
       <BusinessList businesses={businesses} />
     </div>
-  )
-}
+  );
+};
 
 export default App;
